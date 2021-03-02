@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+	<html lang="en" >
+	<head>
+		<meta charset = "utf-8">
+		<!-- Bootstrap: CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+
+	<style>
+
+		html {
+			font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+		}
+
+		body {
+			text-align: left;
+			padding-right: 30%;
+			padding-left: 10%;
+			padding-top: 7.5%;
+			padding-bottom: 5%;
+		}
+
+		.header-section {
+			padding-top: 5%;
+			padding-bottom: 3%;
+		}
+
+		.bottom-section {
+			padding-top: 10%;
+		}
+
+		/* NAV BAR CSS */
+
+		/****NEXT GOAL: MAKE TAB ACCESSIBLE*****/
+
+		div.nav-section a {
+			color: black;
+			text-decoration: none;
+		}
+
+		div.nav-section #about-tab:hover {
+			border-style: solid;
+			border-width: 0px 0px 0px 7.5px; /* 25px top, 10px right, 4px bottom and 35px left */
+			border-color: #e9e3ff;
+			padding-left: 0.75em;
+
+			/*line-height: 1.5em;
+			background-color: #e9e3ff;
+			max-width: 6.5em;*/
+			/*background: linear-gradient(180deg, rgba(255,255,255,0) 50%, #e9e3ff 50%)*/ 
+		}
+
+		div.nav-section #work-tab:hover {
+			border-style: solid;
+			border-width: 0px 0px 0px 7.5px; /* 25px top, 10px right, 4px bottom and 35px left */
+			border-color: #fff2b8;
+			padding-left: 0.75em;
+
+			/*line-height: 1.5em;
+			background-color: #fff2b8;
+			max-width: 3.5em;*/
+		}
+
+		div.nav-section #art-tab:hover {
+			border-style: solid;
+			border-width: 0px 0px 0px 7.5px; /* 25px top, 10px right, 4px bottom and 35px left */
+			border-color: #c7ffec;
+			padding-left: 0.75em;
+			/*line-height: 1.5em;
+			background-color: #e3fffc;
+			max-width: 6em;*/
+		}
+
+		/* END NAV BAR CSS */
+
+		h2 {
+			font-size: 3.5em;
+		}
+
+		.work-content h2 {
+			background: linear-gradient(180deg, rgba(255,255,255,0) 50%, #fff2b8 50%);
+		}
+
+		.about-content h2 {
+			background: linear-gradient(180deg, rgba(255,255,255,0) 50%, #e9e3ff 50%);
+		}
+
+		#heading-subtitle {
+			font-size: 0.80em;
+		}
+
+		.about-content.row {
+			display: inline-block;
+		}
+
+		.about-profile-pic {
+			height: 100%;
+			width: 30%;
+			float: left;
+			margin: 1%;
+			padding-right: 2%;
+		}
+
+		.about-desc p {
+			float: left;
+		}
+
+		/*tagging a piece*/
+
+		td span {
+			display: inline-block;
+		}
+
+		span .tag {
+			float: left;
+			font-size: 80%;
+		}
+
+		td.featured-article span .tag {
+			font-size: 100%;
+		}
+
+		span .published {
+			float: right;
+		}
+
+		span div.tag {
+			border-style: solid;
+			border-width: 1px;
+			padding: 0px 5px 0px 5px;
+			border-radius: 5px;
+		}
+
+		span div.tag.writing-tag {
+			background-color: #fff6d9;
+			border-color: #fce38b;
+		}
+
+		span div.tag.interactive-tag {
+			background-color: #c7edff;
+			border-color: #9cd9f7;
+		}
+
+		span div.tag.multimedia-tag {
+			background-color: #eedeff;
+			border-color: #d2a8ff;
+		}	
+
+		/*end of tagging a piece*/
+
+
+		/* BUTTON CSS */
+
+		/*to align the row of buttons with the left-aligned text*/
+
+		.btn-row {
+			margin-left: 0%;
+		}
+
+		button.btn {
+			/*text-align: left;*/
+			display: inline-block;
+			margin-right: 1em;
+			margin-bottom: 1em;
+			border-style: solid;
+			border-color: lightgray;
+			border-width: 3px;
+			border-radius: 5px;
+		}
+
+		button.btn.all-pieces {
+			width: 4em;
+		}
+
+		button.btn.all-pieces:hover {
+			background-color: #ffe5db;
+			border-color: #ffbea6;
+		}
+
+		button.btn.writing {
+			width: 7em;
+		}
+
+		button.btn.writing:hover {
+			background-color: #fff6d9;
+			border-color: #fce38b;
+		}
+
+		button.btn.interactive {
+			width: 10em;
+		}
+
+		button.btn.interactive:hover {
+			background-color: #c7edff;
+			border-color: #9cd9f7;
+		}
+
+		button.btn.multimedia {
+			width: 13em;
+		}
+
+		button.btn.multimedia:hover {
+			background-color: #eedeff;
+			border-color: #d2a8ff;
+		}
+
+		/* END BUTTON CSS */
+
+
+		td.featured-article {
+			padding-top: 5%;
+			padding-bottom: 5%;
+		}
+
+		td.reg-article {
+			padding-top: 1.5%;
+		}
+
+		td.reg-article p {
+			font-size: 80%;
+		}
+
+		.article-picture {
+			height: 40%;
+			width: 40%;
+			float: left;
+			margin: 1%;
+			padding-right: 2%;
+		}
+
+		td.reg-article .article-picture {
+			height: 20%;
+			width: 20%;
+			float: left;
+			margin: 1%;
+			padding-right: 2%;
+		}
+
+
+	</style>
+
+	<script>
+
+		/* MAIN TAB FUNCTIONS - SELECT CERTAIN TABS */
+
+		$(document).ready(function() {
+
+			$("div.work-content").hide();
+			$("div.art-content").hide();
+
+			$("#about-tab").click(function () {
+				$("div.about-content").show();
+				$("div.work-content").hide();
+				$("div.art-content").hide();
+			});
+
+			$("#work-tab").click(function () {
+				$("div.about-content").hide();
+				$("div.work-content").show();
+				$("div.art-content").hide();
+			});
+
+			$("#art-tab").click(function () {
+				$("div.about-content").hide();
+				$("div.work-content").hide();
+				$("div.art-content").show();
+			});
+		});
+
+		/* TABLE FILTERING BY WRITING / INTERACTIVES / MULTIMEDIA JQUERY */
+
+		$(document).ready(function() {
+			$("button.all-pieces").click(function() {
+				$("tr.words").show();
+				$("tr.multimedia-piece").show();
+				$("tr.interactive-piece").show();
+			});
+			$("button.writing").click(function() {
+				$("tr.words").show();
+				$("tr.multimedia-piece").hide();
+				$("tr.interactive-piece").hide();
+			});
+
+			$("button.interactive").click(function() {
+				$("tr.interactive-piece").show();
+				$("tr.multimedia-piece").hide();
+				$("tr.words").hide();
+			});
+
+			$("button.multimedia").click(function() {
+				$("tr.multimedia-piece").show();
+				$("tr.interactive-piece").hide();
+				$("tr.words").hide();
+			});
+		});
+
+		/*END OF TABLE FILTERING*/
+
+	</script>
+
+
+	<!--add aria labels!!-->
+
+	<body>
+
+		<!--The Holy NavBar: Don't Touch-->
+
+		<div class = "nav-section">
+			<h1 id = "about-tab"><a href = "#">About Me (hi!)</a></h1>
+			<h1 id = "work-tab"><a href = "#">Work</a></h1>
+			<h1 id = "art-tab"><a href = "#">Art Gallery</a></h1>
+		</div>
+
+		<!--END OF The Holy NavBar: Don't Touch-->
+
+		<!--Beginning of About Me-->
+
+		<div class = "about-content">
+
+			<div class = "header-section">
+				<h2>A bit about me~</h2>
+			</div>
+
+			<div class = "row">
+				<div class = "about-desc">
+					<p><img class = "about-profile-pic" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/square_me_with_ponytail.png">Image description: On the left, an illustration of a Korean American genderqueer individual with slightly tan skin, smiling and tilting their head slightly to the right, is pictured. They have long black hair tied up in a ponytail, piercings, slightly lifted dark eyebrows and dark brown eyes. They are wearing gold eyeshadow, black eyeliner, purple spectacles and a purple tank top. <br><br>
+					Hi y'all! I'm <strong>Jenny</strong> and I use they/she pronouns. I am currently a third-year student majoring in Public Health at UC Berkeley and triple-minoring in Journalism, Data Science and Global Poverty & Practice.</p>
+				</div>
+			</div>
+		</div>
+
+		<!--END of About Me-->
+
+		<!--Beginning of Work Portfolio-->
+
+		<div class = "work-content">
+		
+			<div class = "header-section">
+				<h2>Browse my work!</h2>
+				<p id = "heading-subtitle"><i>Press the <strong>tab and space keys</strong> or hover and click to select for all projects or for only writing, only interactives or only multimedia projects!</i></p>
+			</div>
+			
+			<!--Table of Interactives, Articles & Other Journalistic Work-->
+
+			<!--Buttons-->
+			<div class = "row btn-row">
+				<button type="button" class="btn btn-default pull-left all-pieces">All</button>
+				<button type="button" class="btn btn-default pull-left writing"> 🖊 Writing</button>
+				<button type="button" class="btn btn-default interactive"> 🖥️ Interactives</button>
+				<!--<div class = "col-xs-3 col-sm-3 col-md-3 col-lg-3">-->
+				<button type="button" class="btn btn-default pull-right multimedia">🎨 Multimedia/Design</button>
+			</div>
+			<!--End of Buttons-->
+
+			<table style = "width: 100%">
+				
+				<!--Remove table headers-->
+
+				<!--<tr> 
+					<th> Article </th>
+					<th> Category </th>
+				</tr>-->
+
+				<!--Featured Word Article-->
+
+				<tr class = "words">
+					<td class = "featured-article">
+						<h3>High-Risk CA Residents May Be Eligible for COVID-19 Vaccine</h3>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag writing-tag">Writing</div>
+							<p class = "published"> &nbsp;·&nbsp; <strong>Featured</strong>&nbsp;·&nbsp;Published in <a href = "https://pha.berkeley.edu/2021/02/17/high-risk-ca-residents-may-be-eligible-for-covid-19-vaccine/"><strong>The Public Health Advocate</strong></a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. I love I love muffin donut jelly beans gummi bears cookie. I love sweet toffee liquorice carrot cake chocolate I love I love macaroon. I love liquorice pastry bear claw I love toffee. I love I love wafer dragée marshmallow tootsie roll cake cookie brownie. Jujubes fruitcake gummi bears tiramisu. Tootsie roll wafer powder candy canes chocolate cake. Chocolate halvah dessert I love cookie.</p>
+					</td>
+				</tr>
+
+				<!--End of Featured Word Article-->
+
+				<tr class = "words">
+					<td class = "reg-article">
+						<h5>Queer, Here, and Mistreated: LGBTQIA+ Disparities in Healthcare</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag writing-tag">Writing</div>
+							<p class = "published"> &nbsp;·&nbsp;Published in <a href = "https://drive.google.com/file/d/108Pzf1D5yxcx30IlPw9snOji8NOMMElB/view?usp=sharing"><strong>The Public Health Advocate</strong></a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "words">
+					<td class = "reg-article">
+						<h5>How a Korean Movie Will Force You To Re-Evaluate Your Country's Views on Poverty</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag writing-tag">Writing</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://docs.google.com/document/d/1P5Y9RlbrWPlfsZ4TrP9yykiajuK3vII9rc5gcFQEr3U/edit?usp=sharing">Unpublished</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "words">
+					<td class = "reg-article">
+						<h5>The Cultural Whiplash of a Second-Generation Korean American</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag writing-tag">Writing</div>
+							<p class = "published"> &nbsp;·&nbsp;Published in <a href = "https://drive.google.com/file/d/108Pzf1D5yxcx30IlPw9snOji8NOMMElB/view?usp=sharing"><strong>The Public Health Advocate</strong></a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "words">
+					<td class = "reg-article">
+						<h5>The Health Issues of Southeast Asia's Long-Term Refugee Camps</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag writing-tag">Writing</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://docs.google.com/document/d/1P5Y9RlbrWPlfsZ4TrP9yykiajuK3vII9rc5gcFQEr3U/edit?usp=sharing">Unpublished</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "words">
+					<td class = "reg-article">
+						<h5>Alternative Medicine: A Good Alternative to the Doctor?</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag writing-tag">Writing</div>
+							<p class = "published"> &nbsp;·&nbsp;Published in <a href = "https://drive.google.com/file/d/108Pzf1D5yxcx30IlPw9snOji8NOMMElB/view?usp=sharing"><strong>The Public Health Advocate</strong></a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "interactive-piece">
+					<td class = "reg-article">
+						<h5>COVID-19 CARES Act Allocations</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag interactive-tag">Interactive</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/ca-colleges-allocations/">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "interactive-piece">
+					<td class = "reg-article">
+						<h5>Digital Sex Crime Statistics in Korea</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag interactive-tag">Interactive</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/digital-sex-crime/">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "interactive-piece">
+					<td class = "reg-article">
+						<h5>Mapping Newspapers in California</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag interactive-tag">Interactive</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/newspapers-in-california/">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "interactive-piece">
+					<td class = "reg-article">
+						<h5>Visualizing Census & Census-Related Data</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag interactive-tag">Interactive</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "kwonjs.github.io/census-data-vizs//">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "interactive-piece">
+					<td class = "reg-article">
+						<h5>Analyzing My EDM Playlist</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag interactive-tag">Interactive</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/edm_playlist_analysis/">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "multimedia-piece">
+					<td class = "reg-article">
+						<h5>How Healthcare Insurance Companies Benefit From the Pandemic</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag multimedia-tag">Multimedia/Design</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/edm_playlist_analysis/">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+				<tr class = "multimedia-piece">
+					<td class = "reg-article">
+						<h5>A Tribute to <i>Disability Visibility</i></h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag multimedia-tag">Multimedia/Design</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/disability-visibility/">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://i.redd.it/6eh3orzc6kw11.jpg">Cupcake ipsum dolor sit amet candy gummies. Marzipan topping candy canes bear claw bear claw jelly tart danish jujubes. I love topping icing pie candy canes. I love sweet gingerbread jelly. Biscuit toffee cupcake bear claw icing cookie danish pudding bonbon. Jelly-o I love croissant. Pudding I love muffin dragée muffin bonbon. </p>
+					</td>
+				</tr>
+
+			</table>
+
+		</div>
+
+		<!--END of Work Portfolio-->
+
+		<p class = "bottom-section">
+			Made with &#128156; by Jenny <span lang = "kr">서영</span> Kwon · kwonseoyoung[at]berkeley[dot]edu · <i>Last updated February 2021</i>
+		</p>
+		<a href="https://twitter.com/kwonjs_dc" class="twitter-follow-button" data-show-count="false">Follow @kwonjs_dc</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</body>
+</html>
