@@ -107,6 +107,10 @@
 			float: left;
 		}
 
+		.about-desc a:hover {
+			background-color: #e9e3ff;
+		}
+
 		/*tagging a piece*/
 
 		td span {
@@ -243,9 +247,9 @@
 
 	<script>
 
-		/* MAIN TAB FUNCTIONS - SELECT CERTAIN TABS */
-
 		$(document).ready(function() {
+
+			/* MAIN TAB FUNCTIONS - SELECT CERTAIN TABS */
 
 			$("div.work-content").hide();
 			$("div.art-content").hide();
@@ -267,11 +271,10 @@
 				$("div.work-content").hide();
 				$("div.art-content").show();
 			});
-		});
+
 
 		/* TABLE FILTERING BY WRITING / INTERACTIVES / MULTIMEDIA JQUERY */
 
-		$(document).ready(function() {
 			$("button.all-pieces").click(function() {
 				$("tr.words").show();
 				$("tr.multimedia-piece").show();
@@ -308,8 +311,8 @@
 		<!--The Holy NavBar: Don't Touch-->
 
 		<div class = "nav-section">
-			<h1 id = "about-tab"><a href = "#">About Me (hi!)</a></h1>
-			<h1 id = "work-tab"><a href = "#">Work</a></h1>
+			<h1 id = "about-tab"><a href = "#about">About Me (hi!)</a></h1>
+			<h1 id = "work-tab"><a href = "#work">Work</a></h1>
 			<h1 id = "art-tab"><a href = "#">Art Gallery</a></h1>
 		</div>
 
@@ -317,7 +320,7 @@
 
 		<!--Beginning of About Me-->
 
-		<div class = "about-content">
+		<div class = "about-content" id = "about">
 
 			<div class = "header-section">
 				<h2>A bit about me~</h2>
@@ -326,7 +329,11 @@
 			<div class = "row">
 				<div class = "about-desc">
 					<p><img class = "about-profile-pic" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/square_me_with_ponytail.png">Image description: On the left, an illustration of a Korean American genderqueer individual with slightly tan skin, smiling and tilting their head slightly to the right, is pictured. They have long black hair tied up in a ponytail, piercings, slightly lifted dark eyebrows and dark brown eyes. They are wearing gold eyeshadow, black eyeliner, purple spectacles and a purple tank top. <br><br>
-					Hi y'all! I'm <strong>Jenny</strong> and I use they/she pronouns. I am currently a third-year student majoring in Public Health at UC Berkeley and triple-minoring in Journalism, Data Science and Global Poverty & Practice.</p>
+					Hi y'all! I'm <strong>Jenny</strong> and I use they/she pronouns. I am currently a third-year student majoring in <a href = "https://publichealth.berkeley.edu/academics/undergraduate/public-health-ba/curriculum/">Public Health at UC Berkeley</a> and triple-minoring in <a href = "https://journalism.berkeley.edu/programs/summer-minor-program/">Journalism</a>, <a href = "https://data.berkeley.edu/academics/data-science-undergraduate-studies/data-science-minor">Data Science</a> and <a href = "https://blumcenter.berkeley.edu/academics/gpp/">Global Poverty & Practice</a>. My passions lie in art; <a href = "https://www.sinsinvalid.org/blog/10-principles-of-disability-justice">disability justice</a>; the prison-military industrial complex (and how academia plays a role in this); LGBTQIA+ identity and rights, AANHPI (Asian American Native Hawaiian Pacific Islander) justice; big tech, ethics and policy and the intersections of all of these topics! I hope to serve local communities either as an investigative data journalist reporting on health-related issues or as an epidemiologist in the future.<br><br>
+					<a href = "https://drive.google.com/file/d/12AMq7zGQflh34TOGtTewOudyUIjV3U1Y/view?usp=sharing">Click here to view <strong>my resume</strong>!</a>
+					<br><br>
+					Fun fact: I'm very interested in electronic music production and run a regularly updated Spotify playlist called <a href = "https://open.spotify.com/playlist/1xhTWESvAZj3SxkXGrd5ut?si=8rTfZ_BDT7aoAlhEv29vLg">slide into my E'DM's.</a> Give it a listen and please reach out if you're also interested in EDM or if you think a song should be added/removed!
+					</p>
 				</div>
 			</div>
 		</div>
@@ -335,7 +342,7 @@
 
 		<!--Beginning of Work Portfolio-->
 
-		<div class = "work-content">
+		<div class = "work-content" id = "work">
 		
 			<div class = "header-section">
 				<h2>Browse my work!</h2>
