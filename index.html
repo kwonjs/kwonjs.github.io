@@ -161,6 +161,11 @@
 			border-color: #d2a8ff;
 		}	
 
+		span div.tag.research-tag {
+			background-color: #ddffc4;
+			border-color: #bdff8f;
+		}
+
 		/*end of tagging a piece*/
 
 
@@ -217,6 +222,15 @@
 		button.btn.multimedia:hover {
 			background-color: #eedeff;
 			border-color: #d2a8ff;
+		}
+
+		button.btn.research {
+			width: 9em;
+		}
+
+		button.btn.research:hover {
+			background-color: #ddffc4;
+			border-color: #bdff8f;
 		}
 
 		/* END BUTTON CSS */
@@ -288,21 +302,32 @@
 				$("tr.words").show();
 				$("tr.multimedia-piece").show();
 				$("tr.interactive-piece").show();
+				$("tr.research-piece").show();
 			});
 			$("button.writing").click(function() {
 				$("tr.words").show();
 				$("tr.multimedia-piece").hide();
 				$("tr.interactive-piece").hide();
+				$("tr.research-piece").hide();
 			});
 
 			$("button.interactive").click(function() {
 				$("tr.interactive-piece").show();
 				$("tr.multimedia-piece").hide();
 				$("tr.words").hide();
+				$("tr.research-piece").hide();
 			});
 
 			$("button.multimedia").click(function() {
 				$("tr.multimedia-piece").show();
+				$("tr.interactive-piece").hide();
+				$("tr.words").hide();
+				$("tr.research-piece").hide();
+			});
+
+			$("button.research").click(function() {
+				$("tr.research-piece").show();
+				$("tr.multimedia-piece").hide();
 				$("tr.interactive-piece").hide();
 				$("tr.words").hide();
 			});
@@ -332,16 +357,21 @@
 		<div class = "about-content" id = "about">
 
 			<div class = "header-section">
-				<h2>A bit about me~</h2>
+				<h2>About me~</h2>
 			</div>
 
 			<div class = "row">
 				<div class = "about-desc">
-					<p><img class = "about-profile-pic" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/square_me_with_ponytail.png">Image description: On the left, an illustration of a Korean American genderqueer individual with slightly tan skin, smiling and tilting their head slightly to the right, is pictured. They have long black hair tied up in a ponytail, piercings, slightly lifted dark eyebrows and dark brown eyes. They are wearing gold eyeshadow, black eyeliner, purple spectacles and a purple tank top. <br><br>
-					Hi y'all! I'm <strong>Jenny</strong> and I use they/she pronouns. I am currently a third-year student majoring in <a href = "https://publichealth.berkeley.edu/academics/undergraduate/public-health-ba/curriculum/">Public Health at UC Berkeley</a> and triple-minoring in <a href = "https://journalism.berkeley.edu/programs/summer-minor-program/">Journalism</a>, <a href = "https://data.berkeley.edu/academics/data-science-undergraduate-studies/data-science-minor">Data Science</a> and <a href = "https://blumcenter.berkeley.edu/academics/gpp/">Global Poverty & Practice</a>. My passions lie in art; <a href = "https://www.sinsinvalid.org/blog/10-principles-of-disability-justice">disability justice</a>; the prison-military industrial complex (and how academia plays a role in this); LGBTQIA+ identity and rights; AANHPI (Asian American Native Hawaiian Pacific Islander) justice; big tech, ethics and policy and the intersections of all of these topics! I hope to serve local communities either as an investigative data journalist reporting on health-related issues or as an epidemiologist in the future.<br><br>
-					<a href = "https://drive.google.com/file/d/12AMq7zGQflh34TOGtTewOudyUIjV3U1Y/view?usp=sharing">Click here to view <strong>my resume</strong>!</a>  And <a href = "https://www.linkedin.com/in/kwonjs/">click here to see my full resume on LinkedIn</a>.
+					<p><img class = "about-profile-pic" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/square_me_with_ponytail.png"><i>Image description: On the left, an illustration of a Korean American genderqueer individual with slightly tan skin, smiling and tilting their head slightly to the right, is pictured. They have long black hair tied up in a ponytail, piercings, slightly lifted dark eyebrows and dark brown eyes. They are wearing gold eyeshadow, black eyeliner, purple spectacles and a purple tank top.</i>
 					<br><br>
-					Fun fact: I'm very interested in electronic music production and run a regularly updated Spotify playlist called <a href = "https://open.spotify.com/playlist/1xhTWESvAZj3SxkXGrd5ut?si=8rTfZ_BDT7aoAlhEv29vLg">slide into my E'DM's.</a> Give it a listen and please reach out if you're also interested in EDM or if you think a song should be added/removed!
+					Hi y'all! I'm <strong>Jenny</strong> and I use they/she pronouns. I am currently a third-year student majoring in <a href = "https://publichealth.berkeley.edu/academics/undergraduate/public-health-ba/curriculum/">Public Health at UC Berkeley</a> and triple-minoring in <a href = "https://journalism.berkeley.edu/programs/summer-minor-program/">Journalism</a>, <a href = "https://data.berkeley.edu/academics/data-science-undergraduate-studies/data-science-minor">Data Science</a> and <a href = "https://blumcenter.berkeley.edu/academics/gpp/">Global Poverty & Practice</a>. My passions lie in art; <a href = "https://www.sinsinvalid.org/blog/10-principles-of-disability-justice">disability justice</a>; the prison-military industrial complex (and how academia plays a role in this); LGBTQIA+ identity and rights, AANHPI (Asian American Native Hawaiian Pacific Islander) justice; big tech, ethics and policy and the intersections of all of these topics! In the future, I hope to serve local communities either as an investigative data journalist reporting on health-related issues or as an epidemiologist.<br><br>
+					Journalism-wise, I do public health-specific reporting with <a href = "https://pha.berkeley.edu/">the Public Health Advocate</a> and am working on my first project as a data journalist on <a href = "https://projects.dailycal.org/">the Daily Californian's Projects team</a>. Before coming to the Daily Cal, I designed for <a href = "https://therightsstuff.org/">The Rights Stuff</a> (check out their <a href = "https://issuu.com/rightsstuff/docs/the_rights_stuff_-_spring_2020_issue">Spring '20 issue</a> - I designed the cover!) and <a href = "https://bpr.berkeley.edu/">Berkeley Political Review</a>. 
+					<br><br>
+					When I'm not designing graphics or layouts, fiddling with D3 or reporting, I currently serve as a student coordinator for <a href = "https://aapihrg.wordpress.com/">AAPIHRG</a>, or the Asian American & Pacific Islander Health Research Group, mentoring students on their research projects on AAPI-related health issues. I engage in human-centered design as <a href = "https://fungfellows.berkeley.edu/fellows/2020-21-health-track/">a Health + Tech Fung Fellow</a>, learning how to conduct user interviews and engage in rapid prototyping, feedback and iteration. I was a former research assistant at <a href = "https://humanrights.berkeley.edu/programs-projects/tech/investigations-lab">the Human Rights Investigative Lab</a> at the Human Rights Center, where I helped fact-check and collect data for various projects on health and human rights-related issues. 
+					<br><br>
+					<a href = "https://drive.google.com/file/d/12AMq7zGQflh34TOGtTewOudyUIjV3U1Y/view?usp=sharing"><strong>Click here to view my resume</strong>!</a> And <a href = "https://www.linkedin.com/in/kwonjs/">click here to see my full resume on LinkedIn</a>.
+					<br><br>
+					Fun facts: I love learning languages - currently trying to learn ASL (American Sign Language). I'm also very interested in electronic music production and run a regularly updated Spotify playlist called <a href = "https://open.spotify.com/playlist/1xhTWESvAZj3SxkXGrd5ut?si=8rTfZ_BDT7aoAlhEv29vLg">slide into my E'DM's</a>. Give it a listen and please reach out if you're also interested in EDM or if you think a song should be added/removed!
 					</p>
 				</div>
 			</div>
@@ -364,8 +394,8 @@
 			<div class = "row btn-row">
 				<button type="button" class="btn btn-default pull-left all-pieces">All</button>
 				<button type="button" class="btn btn-default pull-left writing"> 🖊 Writing</button>
-				<button type="button" class="btn btn-default interactive"> 🖥️ Interactives</button>
-				<!--<div class = "col-xs-3 col-sm-3 col-md-3 col-lg-3">-->
+				<button type="button" class="btn btn-default pull-right research"> 📝 Research</button>
+				<button type="button" class="btn btn-default interactive"> 📊 Interactives</button>
 				<button type="button" class="btn btn-default pull-right multimedia">🎨 Multimedia/Design</button>
 			</div>
 			<!--End of Buttons-->
@@ -413,7 +443,7 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/lgbt_discrimination.png">In the last few decades, major strides have been taken towards improving the rights of LGBTQIA+ communities. However, this is not the case for many LGBTQIA+ identifying individuals living outside of UC Berkeley, other universities and even the United States.</p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/lgbt_discrimination.png">The fight for LGBTQIA+ acceptance has made major strides in recent years. The goal of health equity, however, has yet to be achieved, especially for many LGBTQIA+ identifying individuals living outside of UC Berkeley, other universities and even the United States.</p>
 					</td>
 				</tr>
 
@@ -430,7 +460,7 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/parasite.png">Parasite (noun): an organism that lives off of another host. In <span lang = "kr">기생충</span>, or “Parasite,” the word itself represents many aspects of the characters and storyline, and the symbolism of its title is a significant contributor to the dual metaphorical-yet-concrete nature of Parasite. To a certain extent, Director Bong Joon Ho uses the metaphor of the parasite to convey the concrete, harsh reality of poverty...However, overdoing this analysis of the “parasite” metaphor to describe living in poverty would dehumanize individuals living at or below the poverty threshold. It also raises an uncomfortable question: Do we ourselves view individuals living at or below the poverty threshold as parasites?</p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/parasite.png">Parasite (noun): an organism that lives off of another host. In <span lang = "kr">기생충</span>, or “Parasite,” the word itself represents many aspects of the characters and storyline, and the symbolism of its title is a significant contributor to the dual metaphorical-yet-concrete nature of Parasite. To a certain extent, Director Bong Joon Ho uses the metaphor of the parasite to convey the concrete, harsh reality of poverty. However, overdoing this analysis of the “parasite” metaphor to describe living in poverty would dehumanize individuals living at or below the poverty threshold. It also raises an uncomfortable question: Do we ourselves view individuals living at or below the poverty threshold as parasites?</p>
 					</td>
 				</tr>
 
@@ -502,6 +532,67 @@
 					</td>
 				</tr>
 
+				<tr class = "research-piece">
+					<td class = "reg-article">
+						<h5>[Contributed] Violence Against Health Care: Attacks During a Pandemic</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag research-tag">Research</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://storymaps.arcgis.com/stories/fd6a804a17b74f0aaa3d00b76b9ab192">Published on StoryMaps ArcGIS</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/violence-against-healthcare-workers.png">I contributed to fact-checking incidents of violence against healthcare workers in México that were cited in this overall report that was cited by <a href = "https://apnews.com/article/covid-19-fuels-attacks-health-workers-92b2df8f56118ffce9d3507a62ae941e">AP News</a>.  
+						<br><br>
+						<i>Skills/Programs used: TweetDeck (open-source data collection on social media), fact-checking </i>
+						</p>
+					</td>
+				</tr>
+
+				<tr class = "research-piece">
+					<td class = "reg-article">
+						<h5>Measuring Perceptions of Leaning Disabilities in Korean and Korean Americans</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag research-tag">Research</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://docs.google.com/presentation/d/1XJ7gYKUZ1kZSbiP-9QjW8C1_jQuUnG7tkwvQTLdj9MU/edit?usp=sharing">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/learning-disab-perceptions-korean.png">I conducted a semester-long research project measuring the perceptions of learning disabilities and individuals with them among Korean and Korean Americans. This project was motivated by a personal, vested interest in Korean perspectives on disability and education and how they interrelate, since I myself am a member of the Korean diaspora. This project is meant not as a comprehensive study on perceptions but rather a start in preparation of diving deeper into the psychological and socioeconomic factors driving these perceptions. Presented a shortened version of this research presentation at <a href = "http://aasa.stanford.edu/lts-2020.html">Stanford's Listen to the Silence 2020 Conference</a>. 
+						<br><br>
+						<i>Skills/Programs used: Creation and distribution of bilingual (English/<span lang = "kr">한국어</span>) mixed-methods survey (data collection), Google Sheets (exploratory data visualization and analysis), word analysis </i>
+						</p>
+					</td>
+				</tr>
+
+				<tr class = "research-piece">
+					<td class = "reg-article">
+						<h5>Linguistic Diversity & Accessibility of Mental Health Services in Ventura County in relation to the Woolsey Fire</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag research-tag">Research</div>
+							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/vc-wildfire-mentalhealth/">Self-published</a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/linguistic-diversity-accessibility.png">During the spring semester of 2020, I attempted to assess whether the Hill-Woolsey Fire specifically had an impact on Ventura County - a county that had endured multiple trauma-inducing events in a short period of time - from a linguistic lens by mapping all Medi-Cal (California’s version of Medicaid) accepting mental health facilities listed by the Ventura County Behavioral Health Department from 2017, 2018 and 2020 and by analyzing Ventura County's needs assessment and long-term disaster recovery plan and identifying linguistic gaps. 
+						<br><br>
+						<i>Skills/Programs used: ArcGIS (data visualization), HTML, CSS & Bootstrap (web design)</i>
+						</p>
+					</td>
+				</tr>
+
+
 				<tr class = "interactive-piece">
 					<td class = "reg-article">
 						<h5>COVID-19 CARES Act Allocations</h5>
@@ -515,7 +606,10 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/covid-allocations-gif.gif">On March 27, 2020, the Coronavirus Aid, Relief, and Economic Security (CARES Act) was signed into law. Click on the link above to view an interactive bubble map visualizing the different amounts allocated to higher education institutions across California and read a little bit more about these allocations and how they were allocated.</p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/covid-allocations-gif.gif">On March 27, 2020, the Coronavirus Aid, Relief, and Economic Security (CARES Act) was signed into law. Click on the link above to view an interactive bubble map visualizing the different amounts allocated to higher education institutions across California and read a little bit more about how these allocations were calculated.
+						<br><br>
+						<i>Languages/Programs used: Google Sheets, Jupyter Notebook & Python (data scraping & cleaning), D3, Javascript, HTML & CSS (visualization) </i>
+						</p>
 					</td>
 				</tr>
 
@@ -532,7 +626,10 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/molka.png"> <span lang = "kr">몰카.</span> Molka. It's an abbreviation for “mollae cameras (몰래 카메라),” otherwise known as “secret" or "hidden cameras," and describes the act of secretly filming mainly female-identifying victims in public and private areas such as bathrooms or love motels and releasing this illegal footage on the internet. Unfortunately, this phenomenon is not a newly reported issue in Korea. Click on the link to read more, see where I got the data from and view charts on related crime statistics.</p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/molka.png"> <span lang = "kr">몰카.</span> Molka. It's an abbreviation for “mollae cameras (몰래 카메라),” otherwise known as “secret" or "hidden cameras," and describes the act of secretly filming mainly female-identifying victims in public and private areas such as bathrooms or love motels and releasing this illegal footage on the internet. Unfortunately, this phenomenon is not a newly reported issue in Korea. Click on the link to read more, see where I got the data from and view charts on related crime statistics.
+						<br><br>
+						<i>Languages/Programs used: Google Sheets (data scraping & cleaning), Charts.js, HTML, CSS & Bootstrap (visualization)</i>
+						</p>
 					</td>
 				</tr>
 
@@ -549,7 +646,9 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/mapping-news.png">I wanted to see if there was a way I could scrape the Library of Congress’s “Chronicling America” database and visualize the distribution of recorded newspapers still operating today (labeled as “current” in the database) in California by county and by city/neighborhood. I wanted to see if there were certain geographic areas within California where there was a dearth of local daily or monthly news, online or in print. The data was cleaned using Google Sheets. Click on the link above to view and interact! </p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/mapping-news.png">I wanted to see if there was a way I could scrape the Library of Congress’s “Chronicling America” database and visualize the distribution of recorded newspapers still operating today (labeled as “current” in the database) in California by county and by city/neighborhood. I wanted to see if there were certain geographic areas within California where there was a dearth of local daily or monthly news, online or in print. The data was cleaned using Google Sheets. Click on the link above to view and interact!
+						<br><br>
+						<i>Languages/Programs used: Google Sheets (data scraping & cleaning) & Tableau (visualization)</i></p>
 					</td>
 				</tr>
 
@@ -566,7 +665,9 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/census.png">These census-related visualizations were created as an independently-led project I did during the 2019 <a href = "https://data.berkeley.edu/research/discovery-program-home">UC Berkeley Data Discovery Summer Program</a>. That summer, the research cohort focused on developing ways to raise awareness about the importance of the decennial U.S. Census. I decided to create Tableau visualizations using the most recent census and census-related data at the time that showed users how they could look up different statistics related to SNAP - the Supplemental Nutrition Assistance Program - and health insurance coverage as a way to gauge how the counties or states they lived in compared to the rest of the U.S. Click on the link above to view, interact and read more. </p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/census.png">These census-related visualizations were created as an independently-led project I did during the 2019 <a href = "https://data.berkeley.edu/research/discovery-program-home">UC Berkeley Data Discovery Summer Program</a>. That summer, the research cohort focused on developing ways to raise awareness about the importance of the decennial U.S. Census. I decided to create Tableau visualizations using the most recent census and census-related data at the time that showed users how they could look up different statistics related to SNAP - the Supplemental Nutrition Assistance Program - and health insurance coverage as a way to gauge how the counties or states they lived in compared to the rest of the U.S. Click on the link above to view, interact and read more.
+						<br><br>
+						<i>Languages/Programs used: Google Sheets (data scraping & cleaning) & Tableau (visualization)</i></p></p>
 					</td>
 				</tr>
 
@@ -583,7 +684,9 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/analyze-edm.png">Investigating the history of EDM (and its roots in European techno) and how big pioneers of the genre were Black queer artists or queer artists of color, I wondered how rich and diverse my own EDM listening taste was. Was I listening to a variety of artists from different backgrounds? Were the songs I had on repeat or the most songs I had on my EDM playlist from people of color (poc) or women/gender-nonconforming/nonbinary folks? Click the link above to follow a step-by-step tutorial on how I analyzed my own EDM playlist (and how you can too). </p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/analyze-edm.png">Investigating the history of EDM (and its roots in European techno) and how big pioneers of the genre were Black queer artists or queer artists of color, I wondered how rich and diverse my own EDM listening taste was. Was I listening to a variety of artists from different backgrounds? Were the songs I had on repeat or the most songs I had on my EDM playlist from people of color (poc) or women/gender-nonconforming/nonbinary folks? Click the link above to follow a step-by-step tutorial on how I analyzed my own EDM playlist (and how you can too).
+						<br><br>
+						<i>Languages/Programs used: Exportify,  Google Sheets (data scraping, cleaning & visualization), Timeline.js (visualization), HTML, CSS & Bootstrap (visualization) & Canva (graphics)</i></p></p>
 					</td>
 				</tr>
 
@@ -600,7 +703,9 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/healthcare-ins-benefit-pandemic-cover.png">A personal project of mine: illustrating a thread on how healthcare insurance companies benefit from the pandemic, tweeted originally by former VP of Cigna Wendell Potter. The image text reads, "As a former health insurance exec, I don't think any story better illustrates my old industry's racket than the one I'm about to tell you: Right now, as we enter the worst public health crisis of our lifetimes (#COVID19), health insurers are still raking in record profits." Click the link to view the whole thread, illustrated.</p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/healthcare-ins-benefit-pandemic-cover.png">A personal project of mine: illustrating a thread on how healthcare insurance companies benefit from the pandemic, tweeted originally by former VP of Cigna Wendell Potter. The image text reads, "As a former health insurance exec, I don't think any story better illustrates my old industry's racket than the one I'm about to tell you: Right now, as we enter the worst public health crisis of our lifetimes (#COVID19), health insurers are still raking in record profits." Click the link to view the whole illustrated thread.
+						<br><br>
+						<i>Programs/Tools used: Adobe Photoshop, Wacom Pen & Touch Tablet</i></p></p>
 					</td>
 				</tr>
 
@@ -617,7 +722,9 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/disability-visibility.png"><i>Disability Visibility</i> was revolutionary in putting disabled voices and dreams into modern mainstream media. I illustrated my interpretation of six stories that touched me and impacted my view of what constitutes disability justice and what is needed to create a kinder and more accessible world. These stories include: "Six Ways of Looking at Crip Time" by Ellen Samuels, "The Beauty of Spaces Created for and by Disabled People" by s.e. smith, "How to Make a Paper Crane from Rage" by Elsa Sjunneson, "Nurturing Black Disabled Joy" by Keah Brown, "I am too pretty for Ugly Laws" (a poem by Lateef McLeod embedded in the story "Gaining Power through Communication Access"), and "I'm Tired of Chasing a Cure" by Liz Moore. Click the link above to view these illustrations in a keyboard accessible carousel/gallery and read more on my interpretations of them. <br><br> <a href = "https://disabilityvisibilityproject.com/">Click here to go to the Disability Visibility Project website run by Alice Wong.</a></p>
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/disability-visibility.png"><i>Disability Visibility</i> was revolutionary in putting disabled voices and dreams into modern mainstream media. I illustrated my interpretation of six stories that touched me and impacted my view of what constitutes disability justice and what is needed to create a kinder and more accessible world. These stories include: "Six Ways of Looking at Crip Time" by Ellen Samuels, "The Beauty of Spaces Created for and by Disabled People" by s.e. smith, "How to Make a Paper Crane from Rage" by Elsa Sjunneson, "Nurturing Black Disabled Joy" by Keah Brown, "I am too pretty for Ugly Laws" (a poem by Lateef McLeod embedded in the story "Gaining Power through Communication Access"), and "I'm Tired of Chasing a Cure" by Liz Moore. Click the link above to view these illustrations in a keyboard accessible carousel/gallery and read more on my interpretations of them. <br><br> <a href = "https://disabilityvisibilityproject.com/">Click here to go to the Disability Visibility Project website run by Alice Wong.</a>
+						<br><br>
+						<i>Languages/Programs used: Javascript (interactivity & accessibility), HTML, CSS & Bootstrap (web design), Adobe Photoshop & Canva (art)</i></p>
 					</td>
 				</tr>
 
@@ -638,7 +745,7 @@
 		</div>
 
 		<p class = "bottom-section">
-			Made with &#128156; by Jenny <span lang = "kr">서영</span> Kwon · kwonseoyoung[at]berkeley[dot]edu · <i>Last updated February 2021</i>
+			Made with &#128156; by Jenny <span lang = "kr">서영</span> Kwon · kwonseoyoung[at]berkeley[dot]edu · <i>Last updated March 2021</i>
 		</p>
 		<a href="https://twitter.com/kwonjs_dc" class="twitter-follow-button" data-show-count="false">Follow @kwonjs_dc</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</body>
