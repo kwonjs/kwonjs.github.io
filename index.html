@@ -315,12 +315,14 @@
 			$("button.all-pieces").click(function() {
 				$("tr.words").show();
 				$("tr.multimedia-piece").show();
+                $("tr.graphic-piece").show();
 				$("tr.interactive-piece").show();
 				$("tr.research-piece").show();
 			});
 			$("button.writing").click(function() {
 				$("tr.words").show();
 				$("tr.multimedia-piece").hide();
+                $("tr.graphic-piece").hide();
 				$("tr.interactive-piece").hide();
 				$("tr.research-piece").hide();
 			});
@@ -330,6 +332,7 @@
 				$("tr.multimedia-piece").hide();
 				$("tr.words").hide();
 				$("tr.research-piece").hide();
+                $("tr.graphic-piece").hide();
 			});
 
 			$("button.multimedia").click(function() {
@@ -337,10 +340,20 @@
 				$("tr.interactive-piece").hide();
 				$("tr.words").hide();
 				$("tr.research-piece").hide();
+                $("tr.graphic-piece").hide();
 			});
 
 			$("button.research").click(function() {
 				$("tr.research-piece").show();
+				$("tr.multimedia-piece").hide();
+				$("tr.interactive-piece").hide();
+				$("tr.words").hide();
+                $("tr.graphic-piece").hide();
+			});
+            
+			$("button.graphic").click(function() {
+                $("tr.graphic-piece").show();
+				$("tr.research-piece").hide();
 				$("tr.multimedia-piece").hide();
 				$("tr.interactive-piece").hide();
 				$("tr.words").hide();
@@ -475,9 +488,28 @@
 
 						<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/ridehailgraphic.png?token=AMPKRAQR6HXWQSOQ7K5ZQCLBU2KM6">In the King County area, E&Ts turned away about half of all referrals over the past two years due to medical reasons. Examples include dementia, CPAP machines, substance use, autism or a developmental disability, pregnancy, or a person with COVID-19.
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/crisis-care-centers.png">In the King County area, E&Ts turned away about half of all referrals over the past two years due to medical reasons. Examples include dementia, CPAP machines, substance use, autism or a developmental disability, pregnancy, or a person with COVID-19.
                         <br><br>
-						<i>Languages/Programs used: Leaflet, jQuery, Adobe Illustrator</i></p>
+						<i>Languages/Programs used: Leaflet (map), jQuery (interactivity), Adobe Illustrator (static graphic)</i></p>
+					</td>
+				</tr>
+                
+                <tr class = "graphic-piece">
+					<td class = "reg-article">
+						<h5>Costco’s $1.50 hot dog deal has defied inflation. Fans say it isn’t what it used to be.</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag interactive-tag">Graphic</div>
+							<p class = "published"> &nbsp;·&nbsp;Published in <a href = "https://www.seattletimes.com/business/costcos-1-50-hot-dog-deal-has-held-steady-during-record-inflation-faithful-eaters-still-arent-impressed/"><strong>The Seattle Times</strong></a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/ridehailgraphic.png?token=AMPKRAQR6HXWQSOQ7K5ZQCLBU2KM6">Fans say it's not what it used to be. Fans of Costco's hot dog combo can rest assured that the price isn't going up anytime soon, CEO Craig Jelinek told CNBC on Monday.
+                        <br><br>
+						<i>Languages/Programs used: Google Sheets (data analysis), Adobe Illustrator (static graphic)</i></p>
 					</td>
 				</tr>   
                 
