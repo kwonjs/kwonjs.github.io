@@ -165,6 +165,11 @@
 			background-color: #ddffc4;
 			border-color: #bdff8f;
 		}
+        
+        span div.tag.graphic-tag {
+            background-color: #ffc4db;
+            border-color: #ff96bf;
+        }
 
 		/*end of tagging a piece*/
 
@@ -207,7 +212,7 @@
 		}
 
 		button.btn.interactive {
-			width: 10em;
+			width: 14em;
 		}
 
 		button.btn.interactive:hover {
@@ -232,6 +237,15 @@
 			background-color: #ddffc4;
 			border-color: #bdff8f;
 		}
+        
+        button.btn.graphic {
+            width: 13em;
+        }
+        
+        button.btn.graphic:hover {
+            background-color: #ffc4db;
+            border-color: #ff96bf;
+        }
 
 		/* END BUTTON CSS */
 
@@ -393,7 +407,8 @@
 			<!--Buttons-->
 			<div class = "row btn-row">
 				<button type="button" class="btn btn-default pull-left all-pieces">All</button>
-                <button type="button" class="btn btn-default interactive"> 📊 Visualizations</button>
+                <button type="button" class="btn btn-default pull-left graphic"> <strong>NEW!</strong> 📈 Static Graphics </button>
+                <button type="button" class="btn btn-default interactive"> <strong>UPDATED!</strong> 📊 Interactives </button>
 				<button type="button" class="btn btn-default pull-left writing"> 🖊 Writing</button>
 				<button type="button" class="btn btn-default pull-right research"> 📝 Research</button>
 				<button type="button" class="btn btn-default pull-right multimedia">🎨 🎧 Multimedia</button>
@@ -449,12 +464,31 @@
                 
                 <tr class = "interactive-piece">
 					<td class = "reg-article">
+						<h5>Why King County mental health facilities decline 27% of referrals</h5>
+
+						<!--publish & tag section-->
+
+						<span>
+							<div class = "tag interactive-tag">Interactive</div>
+							<p class = "published"> &nbsp;·&nbsp;Published in <a href = "https://www.seattletimes.com/seattle-news/mental-health/why-king-county-mental-health-facilities-decline-27-of-referrals/"><strong>The Seattle Times</strong></a></p>
+						</span>
+
+						<!--END OF publish & tag section-->
+
+						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/ridehailgraphic.png?token=AMPKRAQR6HXWQSOQ7K5ZQCLBU2KM6">In the King County area, E&Ts turned away about half of all referrals over the past two years due to medical reasons. Examples include dementia, CPAP machines, substance use, autism or a developmental disability, pregnancy, or a person with COVID-19.
+                        <br><br>
+						<i>Languages/Programs used: Leaflet, jQuery, Adobe Illustrator</i></p>
+					</td>
+				</tr>   
+                
+                <tr class = "interactive-piece">
+					<td class = "reg-article">
 						<h5>California Failed to Consistently Track Ride-Hailing Assault and Harassment Complaints</h5>
 
 						<!--publish & tag section-->
 
 						<span>
-							<div class = "tag interactive-tag">Visualization</div>
+							<div class = "tag interactive-tag">Interactive</div>
 							<p class = "published"> &nbsp;·&nbsp;Published in <a href = "https://www.sfpublicpress.org/california-failed-to-consistently-track-ride-hailing-assault-and-harassment-complaints/"><strong>San Francisco Public Press</strong></a></p>
 						</span>
 
@@ -473,7 +507,7 @@
 						<!--publish & tag section-->
 
 						<span>
-							<div class = "tag interactive-tag">Visualization</div>
+							<div class = "tag interactive-tag">Interactive</div>
 							<p class = "published"> &nbsp;·&nbsp;Published in <a href = "https://www.sfpublicpress.org/rent-payments-to-sf-public-housing-agency-plunged-in-last-two-years-spurring-eviction-fears/"><strong>San Francisco Public Press</strong></a></p>
 						</span>
 
@@ -492,7 +526,7 @@
 						<!--publish & tag section-->
 
 						<span>
-							<div class = "tag interactive-tag">Visualization</div>
+							<div class = "tag interactive-tag">Interactive</div>
 							<p class = "published"> &nbsp;·&nbsp;Published in <a href = "https://www.sfpublicpress.org/bay-area-traffic-congestion-returns/"><strong>San Francisco Public Press</strong></a></p>
 						</span>
 
@@ -674,7 +708,7 @@
 						<!--publish & tag section-->
 
 						<span>
-							<div class = "tag interactive-tag">Visualization</div>
+							<div class = "tag interactive-tag">Interactive</div>
 							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/ca-colleges-allocations/">Self-published</a></p>
 						</span>
 
@@ -694,7 +728,7 @@
 						<!--publish & tag section-->
 
 						<span>
-							<div class = "tag interactive-tag">Visualization</div>
+							<div class = "tag interactive-tag">Interactive</div>
 							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/digital-sex-crime/">Self-published</a></p>
 						</span>
 
@@ -714,7 +748,7 @@
 						<!--publish & tag section-->
 
 						<span>
-							<div class = "tag interactive-tag">Visualization</div>
+							<div class = "tag interactive-tag">Interactive</div>
 							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/newspapers-in-california/">Self-published</a></p>
 						</span>
 
@@ -733,7 +767,7 @@
 						<!--publish & tag section-->
 
 						<span>
-							<div class = "tag interactive-tag">Visualization</div>
+							<div class = "tag interactive-tag">Interactive</div>
 							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/census-data-vizs/">Self-published</a></p>
 						</span>
 
@@ -752,7 +786,7 @@
 						<!--publish & tag section-->
 
 						<span>
-							<div class = "tag interactive-tag">Visualization</div>
+							<div class = "tag interactive-tag">Interactive</div>
 							<p class = "published"> &nbsp;·&nbsp;<a href = "https://kwonjs.github.io/edm_playlist_analysis/">Self-published</a></p>
 						</span>
 
