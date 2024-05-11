@@ -420,11 +420,11 @@
 			<!--Buttons-->
 			<div class = "row btn-row">
 				<button type="button" class="btn btn-default pull-left all-pieces">All</button>
-                <button type="button" class="btn btn-default pull-left graphic"> <strong>NEW!</strong> 📈 Static Graphics </button>
-                <button type="button" class="btn btn-default interactive"> <strong>UPDATED!</strong> 📊 Interactives </button>
+				<button type="button" class="btn btn-default interactive"> <strong>UPDATED!</strong> 📊 Interactives </button>
+				<button type="button" class="btn btn-default pull-right multimedia"><strong>UPDATED!</strong>🎨 🎧 Multimedia</button>
+                <button type="button" class="btn btn-default pull-left graphic"> 📈 Static Graphics </button>
 				<button type="button" class="btn btn-default pull-left writing"> 🖊 Writing</button>
 				<button type="button" class="btn btn-default pull-right research"> 📝 Research</button>
-				<button type="button" class="btn btn-default pull-right multimedia">🎨 🎧 Multimedia</button>
 			</div>
 			<!--End of Buttons-->
 
@@ -437,26 +437,138 @@
 					<th> Category </th>
 				</tr>-->
 
-				<!--Featured Word Article-->
+<!--Featured Word Article-->
+<!--COVID wastewater tracker-->
 
-				<tr class = "multimedia-piece">
-					<td class = "featured-article">
-						<h3>As Restrictions Go Away, Long COVID Is Here To Stay</h3>
+                <tr class = “interactive-piece">
+                    <td class = "featured-article">
+                        <h3>These charts track COVID in the Bay Area through wastewater data</h3>
 
-						<!--publish & tag section-->
+                        <!--publish & tag section-->
 
-						<span>
-							<div class = "tag multimedia-tag">Multimedia/Audio</div>
-							<p class = "published"> &nbsp; ·&nbsp; <strong>Featured</strong>&nbsp;·&nbsp;Published in <a href = "https://pha.berkeley.edu/episode-one/"><strong>The Public Health Advocate</strong></a></p>
-						</span>
+                        <span>
+                            <div class = "tag interactive-tag">Interactive</div>
+                            <p class = "published"> &nbsp; ·&nbsp; <strong>Featured</strong>&nbsp;·&nbsp;Published in <a href = "https://www.sfchronicle.com/projects/2023/covid-bay-area-wastewater/"><strong>The San Francisco Chronicle</strong></a></p>
+                        </span>
 
-						<!--END OF publish & tag section-->
+<!--END OF publish & tag section-->
 
-						<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/pha-podcast-ep-1-cover.png">Even as restrictions go away, long COVID is here to stay. <br><br> After over a year of lockdown, Governor Gavin Newsom lifted COVID-19 restrictions on June 15. With proof of vaccination, California residents are now allowed to engage in pre-pandemic activities such as indoor dining and concert-going without masks or social distancing. <br><br> For thousands of long haulers, however, the pandemic is far from over. Featuring experts such as Lisa McCorkell, one of the founding members of Patient-Led Research Collaborative; Dr. Bradley Sanville, a pulmonologist working at the Post COVID-19 Clinic at UC Davis; and Laura Stock, Director of the Labor Occupational Health Program at the University of California, Berkeley, this episode delves into what exactly long COVID, or Post-Acute Sequelae of SARS-CoV-2, entails and what research is being done and what this implies for the future of work and wellbeing. <br><br><i>Programs/Tools used: Adobe Premiere Pro, Audacity, Zoom H1n Handy Microphone, Blue Yeti USB Microphone</i></p>
-					</td>
-				</tr>
+<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/covid-wastewater-tracker.gif">The Chronicle is using wastewater surveillance to track the prevalence of COVID-19 in the Bay Area. Due to the scaling back of virus tracking efforts nationwide, scientists and public health experts — including those at the U.S. Centers for Disease Control and Prevention — have turned to monitoring the concentration of SARS-CoV-2 particles found in wastewater at sewage treatment plants as a more dependable metric for community-level infection rates. This tracker pulls data daily and  displays data on the most recent and historic levels of SARS-CoV-2 concentrations at 12 Bay Area wastewater plants using WastewaterSCAN's API. 
+                        <br><br>
+                        <i>Languages/Programs used: Python, Git, Amazon AWS (S3) server, ReactJS, D3</I></p>
 
-				<!--End of Featured Word Article-->
+                    </td>
+                </tr>
+
+                <!--End of Featured Word Article-->
+				<!--SF public restrooms map-->
+
+
+                <tr class = “interactive-piece”>
+                    <td class = "reg-article">
+                        <h5>S.F. feces complaints rise again despite city spending millions on public toilets
+						</h5>
+
+                        <!--publish & tag section-->
+
+                        <span>
+                            <div class = "tag interactive-tag">Interactive</div>
+                            <p class = "published"> &nbsp;·&nbsp;Published in <a href = “https://www.sfchronicle.com/projects/2024/public-toilets-sf/”><strong>The San Francisco Chronicle</strong></a></p>
+                        </span>
+
+                        <!--END OF publish & tag section-->
+
+<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/TKTK">Accompanying this piece on feces complaints steadily rising even with city-run public restroom programs is a map showing all publicly accessible restrooms throughout the city as of March 2024. Readers can filter by “type” of restroom (for instance, whether the restroom is within a BART train station) and filter ones that are wheelchair accessible, open 24 hours or staffed. They can also click on each point to see locations and hours and days that the restrooms are open. I compiled data from multiple sources, confirmed and revised information, including locations, availability and accessibility, with multiple public and private sources,  developed the map and did background reporting for this story. <br><br>
+                        <i>Languages/Programs used: ReactJS, Google spreadsheets</I></p>
+
+                    </td>
+                </tr>
+
+<!--Korean comfort food guide-->
+
+                <tr class = “multimedia-piece”>
+                    <td class = "reg-article">
+                        <h5>Finding Korean comfort food in the Bay Area
+</h5>
+
+                        <!--publish & tag section-->
+
+                        <span>
+                            <div class = "tag multimedia-tag">Multimedia</div>
+                            <p class = "published"> &nbsp;·&nbsp;Published in <a href = “https://www.sfchronicle.com/projects/2023/bay-area-korean-comfort-food/”><strong>The San Francisco Chronicle</strong></a></p>
+                        </span>
+
+                        <!--END OF publish & tag section-->
+
+<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/TKTK">In this guide, the Chronicle's Korean American staffers share their favorite comfort foods — galbitang (갈비탕), soondaeguk (순대국), kimbap (김밥), tteokmanduguk (떡만두국) — and where to get them in the Bay Area. Each of us come from similar but different backgrounds, hometowns and connections to the land of our heritage. And we each have our own takes on the food that nurtures our souls. I contributed to a section of this guide, and illustrated and designed the whole project.<br><br>
+                        <i>Languages/Programs/Tools used: ReactJS, Adobe Illustrator, Adobe Photoshop</I></p>
+
+                    </td>
+                </tr>
+
+
+<!--National forest tree death-->
+
+                <tr class = “multimedia-piece”>
+                    <td class = "reg-article">
+                        <h5>Millions of trees have died in California forests. This map shows the hardest-hit areas</h5>
+
+                        <!--publish & tag section-->
+
+                        <span>
+                            <div class = "tag multimedia-tag">Multimedia</div>
+                            <p class = "published"> &nbsp;·&nbsp;Published in <a href = “https://www.sfchronicle.com/projects/2023/california-tree-death-map/”><strong>The San Francisco Chronicle</strong></a></p>
+                        </span>
+
+                        <!--END OF publish & tag section-->
+
+<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/TKTK">In 2022, not counting wildfire deaths, over 36 million trees in California's national forests died. I dove into the main causes — drought stress,  flooding, insect population increases and disease — and built this scrolly map that walks through the forests that have been hit the hardest.<br><br>
+                        <i>Languages/Programs/Tools used: ReactJS, MapLibre, QGIS</I></p>
+
+                    </td>
+                </tr>
+
+<!--Housing element-->
+
+                <tr class = “multimedia-piece”>
+                    <td class = "reg-article">
+                        <h5>S.F. must create 82,000 new homes in 8 years. The city is already behind</h5>
+
+                        <!--publish & tag section-->
+
+                        <span>
+                            <div class = "tag multimedia-tag">Multimedia</div>
+                            <p class = "published"> &nbsp;·&nbsp;Published in <a href = “https://www.sfchronicle.com/projects/2023/san-francisco-housing/”><strong>The San Francisco Chronicle</strong></a></p>
+                        </span>
+
+                        <!--END OF publish & tag section-->
+
+<p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/TKTK">San Francisco has a mind-boggling challenge ahead: Approve 82,000 new homes by 2031. The mandate comes from California officials, who say they’re committed to improving the state’s crippling housing shortage. But can it be done? This multimedia piece, with a video scrolly and Datawrapper visualizations I developed alongside designer Daymond Gascon and with the reporting of J.D. Morris and J.K. Dineen, visually shows just how daunting this task will be. <br><br>
+                        <i>Languages/Programs/Tools used: ReactJS, Datawrapper</I></p>
+
+                    </td>
+                </tr>
+
+                <!--Podcast ep: Restrictions away, Long COVID stays-->
+
+                <tr class = "multimedia-piece">
+                    <td class = “reg-article">
+                        <h5>As Restrictions Go Away, Long COVID Is Here To Stay</h5>
+
+                        <!--publish & tag section-->
+
+                        <span>
+                            <div class = "tag multimedia-tag">Multimedia</div>
+                            <p class = "published"> &nbsp;·&nbsp;Published in <a href = “https://pha.berkeley.edu/2021/02/17/high-risk-ca-residents-may-be-eligible-for-covid-19-vaccine/”><strong>The Public Health Advocate</strong></a></p>
+                        </span>
+
+                        <!--END OF publish & tag section-->
+
+                        <p><img class = "article-picture" src = "https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/images/pha-podcast-ep-1-cover.png">Even as restrictions go away, long COVID is here to stay. <br><br> After over a year of lockdown, Governor Gavin Newsom lifted COVID-19 restrictions on June 15. With proof of vaccination, California residents are now allowed to engage in pre-pandemic activities such as indoor dining and concert-going without masks or social distancing. <br><br> For thousands of long haulers, however, the pandemic is far from over. Featuring experts such as Lisa McCorkell, one of the founding members of Patient-Led Research Collaborative; Dr. Bradley Sanville, a pulmonologist working at the Post COVID-19 Clinic at UC Davis; and Laura Stock, Director of the Labor Occupational Health Program at the University of California, Berkeley, this episode delves into what exactly long COVID, or Post-Acute Sequelae of SARS-CoV-2, entails and what research is being done and what this implies for the future of work and wellbeing. <br><br><i>Programs/Tools used: Adobe Premiere Pro, Audacity, Zoom H1n Handy Microphone, Blue Yeti USB Microphone</i></p>
+                    </td>
+                </tr>
+
+				<!--End of updates from May 2024-->
                 
 				<tr class = "words">
 					<td class = "reg-article">
