@@ -286,10 +286,12 @@
 			width: 100%;
 			overflow-y: scroll;
 		}
+
 		.horizonal-content {
 			width: max-content;
 			border: 1px solid;
 		}
+
 		.gallery-1,
 		.gallery-2,
 		.gallery-3 {
@@ -305,13 +307,13 @@
 
 	<script>
 
-		$(document).ready(function() {
+		/* jQuery functionality for horizontal scroll in art gallery portion */
 
-			/* jQuery functionality for horizontal scroll in art gallery portion */
-
-			$('.horizonal-wrapper').on('wheel', function(e){
-				e.preventDefault();
+		$('.horizonal-wrapper').on('wheel', function(e){
+			e.preventDefault();
 				$(this).scrollLeft($(this).scrollLeft() + e.originalEvent.deltaY);});
+
+		$(document).ready(function() {
 
 			// for mobile
 			// document.addEventListener('touchmove', function(e) {
