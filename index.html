@@ -307,13 +307,13 @@
 
 	<script>
 
-		/* jQuery functionality for horizontal scroll in art gallery portion */
+		$(document).ready(function() {
 
-		$('.horizonal-wrapper').on('wheel', function(e){
+			/* jQuery functionality for horizontal scroll in art gallery portion */
+			
+			$('.horizontal-wrapper').on('wheel', function(e){
 			e.preventDefault();
 				$(this).scrollLeft($(this).scrollLeft() + e.originalEvent.deltaY);});
-
-		$(document).ready(function() {
 
 			// for mobile
 			// document.addEventListener('touchmove', function(e) {
