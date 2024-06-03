@@ -75,6 +75,16 @@
 			max-width: 6em;*/
 		}
 
+		div.nav-section #crochet-tab:hover {
+			border-style: solid;
+			border-width: 0px 0px 0px 7.5px; /* 25px top, 10px right, 4px bottom and 35px left */
+			border-color: #ffc3b3;
+			padding-left: 0.75em;
+			/*line-height: 1.5em;
+			background-color: #e3fffc;
+			max-width: 6em;*/
+		}
+
 		/* END NAV BAR CSS */
 
 		h2 {
@@ -91,6 +101,10 @@
 
 		.art-content h2 {
 			background: linear-gradient(180deg, rgba(255,255,255,0) 50%, #c7ffec 50%);
+		}
+
+		.crochet-content h2 {
+			background: linear-gradient(180deg, rgba(255,255,255,0) 50%, #ffc3b3 50%);
 		}
 
 		#heading-subtitle {
@@ -342,25 +356,35 @@
 
 			$("div.work-content").hide();
 			$("div.art-content").hide();
+			$("div.crochet-content").hide();
 
 			$("#about-tab").click(function () {
 				$("div.about-content").show();
 				$("div.work-content").hide();
 				$("div.art-content").hide();
+				$("div.crochet-content").hide();
 			});
 
 			$("#work-tab").click(function () {
 				$("div.about-content").hide();
 				$("div.work-content").show();
 				$("div.art-content").hide();
+				$("div.crochet-content").hide();
 			});
 
 			$("#art-tab").click(function () {
 				$("div.about-content").hide();
 				$("div.work-content").hide();
 				$("div.art-content").show();
+				$("div.crochet-content").hide();
 			});
 
+			$("#crochet-tab").click(function () {
+				$("div.about-content").hide();
+				$("div.work-content").hide();
+				$("div.art-content").hide();
+				$("div.crochet-content").show();
+			});
 
 		/* TABLE FILTERING BY WRITING / INTERACTIVES / MULTIMEDIA JQUERY */
 
@@ -427,6 +451,7 @@
 			<h1 id = "about-tab"> <a href = "#about">About Me (hi!)</a></h1>
 			<h1 id = "work-tab"><a href = "#work">Work</a></h1>
 			<h1 id = "art-tab"><a href = "#art">Art Gallery</a></h1>
+			<h1 id = "crochet-tab"><a href = "#crochet">Crochet & Crafting</a></h1>
 		</div>
 
 		<!--END OF The Holy NavBar: Don't Touch-->
