@@ -336,6 +336,79 @@
 			justify-self: start;
 		} */
 
+		/* STYLING THE MODAL */
+
+		 /* style the image triggering the modal */
+		 
+		.gallery-img {
+			/* border-radius: 5px; */
+			cursor: pointer;
+			transition: 0.3s;
+		}
+		
+		.gallery-img:hover {
+			border: 2px #c7ffec; /* this needs to match the section color */
+			opacity: 0.7;
+		}
+		
+		/* the modal (background) */
+		
+		.modal {
+			display: none; /* modal is hidden by default */
+			position: fixed;
+			z-index: 1; /* modal needs to be on top */
+			padding-top: 100px; /* This positions the modal box */
+			left: 0;
+			top: 0;
+			width: 100%; 
+			height: 100%; 
+			overflow: auto; 
+			background-color: rgb(0,0,0); /* fallback color */
+			background-color: rgba(0,0,0,0.75); /* black with not full opacity */
+		}
+		
+		/* modal content (the image) */
+		
+		.modal-content {
+			margin: auto;
+			display: block;
+			width: 80%;
+			max-width: 700px;
+		}
+		
+		/* add zoom in animation to modal content */
+		
+		.modal-content {
+			animation-name: zoom;
+			animation-duration: 0.6s;
+		}
+		
+		@keyframes zoom {
+			from {transform:scale(0)}
+			to {transform:scale(1)} }
+			
+		/* close out of the modal */
+		
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 35px;
+			color: #f1f1f1;
+			font-size: 40px;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+		.close:hover,.close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		
+		/* maintain 100% image width on smaller screens */
+		@media only screen and (max-width: 700px){
+			.modal-content {
+				width: 100%;
+			}} 
 
 		/* END STYLING FOR ART GALLERY PORTION */
 
@@ -429,9 +502,22 @@
 				$("tr.interactive-piece").hide();
 				$("tr.words").hide();
 			});
+
+			/* MODAL FUNCTIONALITY */
+			/* FOR ART GALLERY */
+
+			$("img.gallery-img").click(function() {
+				$("img.gallery-img").style.display = "block";
+			})
+
+
 		});
 
 		/*END OF TABLE FILTERING*/
+
+		// var selectimg = $('img.'+gallery-img);
+		
+
 
 	</script>
 
@@ -1367,60 +1453,60 @@
 
 			<div class="gallery-wrapper">
 				<div class="grid">
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/bird-migration-topper.png" alt="An illustration of a view of the Golden Gate Bridge from Marin, with rolling green hills and evergreen trees in the foreground and more hills shrouded in fog in the background. In the center, a flock of surf scoters fly past."/>
+					<figure><img id="bird-migration-topper" class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/bird-migration-topper.png" alt="An illustration of a view of the Golden Gate Bridge from Marin, with rolling green hills and evergreen trees in the foreground and more hills shrouded in fog in the background. In the center, a flock of surf scoters fly past."/>
 						<figcaption><a href="https://www.sfchronicle.com/projects/2024/sf-bird-migration/">"Here’s why the Bay Area is so important for birds — and where to find them"</a> (San Francisco Chronicle, Christian Leonard + Jenny Kwon)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/farallon-islands-bird-migration.png" alt="An illustration of a brown pelican, black red-mouthed pigeon guillemot and dark brown common murre either perched or swimming in the rocky habitat of the Farallon Islands."/>
+					<figure><img id="farallon-islands"  class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/farallon-islands-bird-migration.png" alt="An illustration of a brown pelican, black red-mouthed pigeon guillemot and dark brown common murre either perched or swimming in the rocky habitat of the Farallon Islands."/>
 						<figcaption><a href="https://www.sfchronicle.com/projects/2024/sf-bird-migration/">"Here’s why the Bay Area is so important for birds — and where to find them"</a> (San Francisco Chronicle, Christian Leonard + Jenny Kwon)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/coyote-hills-bird-migration.png" alt="An illustration of a red-winged blackbird, a tan-colored American avocet and rust-colored, bright blue-billed ruddy duck flying over or swimming in Coyote Hills." />
+					<figure><img id="coyote-hills"   class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/coyote-hills-bird-migration.png" alt="An illustration of a red-winged blackbird, a tan-colored American avocet and rust-colored, bright blue-billed ruddy duck flying over or swimming in Coyote Hills." />
 						<figcaption><a href="https://www.sfchronicle.com/projects/2024/sf-bird-migration/">"Here’s why the Bay Area is so important for birds — and where to find them"</a> (San Francisco Chronicle, Christian Leonard + Jenny Kwon)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/rodeo-lagoon-bird-migration.png" alt="An illustration of a dark brown band-tailed pigeon, gray and white red-eyed Western grebe and white chinned Canada goose flying over, swimming in and perched beside Rodeo Lagoon."/>
+					<figure><img id="rodeo-lagoon" class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/rodeo-lagoon-bird-migration.png" alt="An illustration of a dark brown band-tailed pigeon, gray and white red-eyed Western grebe and white chinned Canada goose flying over, swimming in and perched beside Rodeo Lagoon."/>
 						<figcaption><a href="https://www.sfchronicle.com/projects/2024/sf-bird-migration/">"Here’s why the Bay Area is so important for birds — and where to find them"</a> (San Francisco Chronicle, Christian Leonard + Jenny Kwon)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/tteokmanduguk.png" />
+					<figure><img id="tteokmanduguk" class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/tteokmanduguk.png" />
 						<figcaption><a href="https://www.sfchronicle.com/projects/2023/bay-area-korean-comfort-food/">"Finding Korean comfort food in the Bay Area"</a> (San Francisco Chronicle, Yoohyun Jung + Jenny Kwon (me!) + Christian Leonard + Salgu Wissmath)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/galbitang.png" />
+					<figure><img id="galbitang"  class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/galbitang.png" />
 						<figcaption><a href="https://www.sfchronicle.com/projects/2023/bay-area-korean-comfort-food/">"Finding Korean comfort food in the Bay Area"</a> (San Francisco Chronicle, Yoohyun Jung + Jenny Kwon (me!) + Christian Leonard + Salgu Wissmath)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/kimbap.png" />
+					<figure><img id="kimbap"   class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/kimbap.png" />
 						<figcaption><a href="https://www.sfchronicle.com/projects/2023/bay-area-korean-comfort-food/">"Finding Korean comfort food in the Bay Area"</a> (San Francisco Chronicle, Yoohyun Jung + Jenny Kwon (me!) + Christian Leonard + Salgu Wissmath)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/soondaeguk.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/soondaeguk.png" />
 						<figcaption><a href="https://www.sfchronicle.com/projects/2023/bay-area-korean-comfort-food/">"Finding Korean comfort food in the Bay Area"</a> (San Francisco Chronicle, Yoohyun Jung + Jenny Kwon (me!) + Christian Leonard + Salgu Wissmath)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/rejected-licenses.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/rejected-licenses.png" />
 						<figcaption><a href="https://www.sfchronicle.com/california/article/rejected-license-plates-dmv-18589821.php">"'KSMYAS5': These vanity license plates were deemed too lewd for California DMV"</a> (San Francisco Chronicle, Emma Stiefel)</figcaption>
 					</figure>
 					
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/ev_astranis_desktop.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/ev_astranis_desktop.png" />
 						<figcaption><a href="https://www.sfchronicle.com/tech/article/sf-high-speed-internet-17672858.php">"Billions of people still lack high-speed internet. This S.F. company is building satellites to change that"</a> (San Francisco Chronicle, Chase DiFeliciantonio)</figcaption>
 					</figure>
 				
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/batteryfire_preview.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/batteryfire_preview.png" />
 						<figcaption><a href="https://www.sfchronicle.com/sf/article/bike-scooter-battery-fire-17869505.php">"E-bike and scooter batteries are suddenly 'erupting' in S.F. What are regulators doing to stop them?"</a> (San Francisco Chronicle, Chase DiFeliciantonio)</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/engracia_figueroa.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/engracia_figueroa.png" />
 						<figcaption><a href="https://pha.studentorg.berkeley.edu/2021/02/17/high-risk-ca-residents-may-be-eligible-for-covid-19-vaccine/">"High-Risk CA Residents May Be Eligible for COVID-19 Vaccine" </a>(Public Health Advocate, Jenny Kwon)</figcaption></figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/disability_ragecrane.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/disability_ragecrane.png" />
 						<figcaption>From <a href="https://kwonjs.github.io/disability-visibility">a tribute I made</a> for Alice Wong's Disability Visibility</figcaption></figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/flume_flower_wavy.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/flume_flower_wavy.png" />
 						<figcaption>Slightly different rendition of Flume's Skin album</figcaption></figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/ivy_ravevers.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/ivy_ravevers.png" />
 						<figcaption>Portrait of my good friend</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/warren_hue.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/warren_hue.png" />
 						<figcaption>Portrait of someone whom I wish were my friend: Warren Hue from 88Rising</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/fuckyournormal.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/fuckyournormal.png" />
 						<figcaption>A portrait of a head splitting open to reveal a landscape with a shining sun, grass, waves and space. The phrase "fuck your 'normal'" hangs above the split-open head.</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/kimchi_jar.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/kimchi_jar.png" />
 						<figcaption>One of my sticker ideas: A jar of kimchi, but the kimchi is shaped like koi fish swimming in brine.</figcaption>
 					</figure>
-					<figure><img src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/coffea-arabica-plant-beans.png" />
+					<figure><img class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/coffea-arabica-plant-beans.png" />
 						<figcaption>An illo I created as part of <a href="https://www.sfchronicle.com/climate/article/Specialty-coffee-threats-17676000.php">"High-end coffee is facing a reckoning — thanks to one tiny bug"</a> (San Francisco Chronicle, Chase DiFeliciantonio), a larger story covering the coffee berry borer beetle and its impact on the coffee industry</figcaption>
 					</figure>
 				</div>
@@ -1438,6 +1524,11 @@
 				<h5>Am accepting commissions for crochet and embroidery work!</h5>
 			</div>
 		</div> -->
+
+		<!-- The modal -->
+		<div id="modal-popup" class="modal" onclick="this.style.display='none'">
+			<img class="modal-content" id="modal-popup-img" style="width:100%">
+		</div>
 
 
 		<p class = "bottom-section">
