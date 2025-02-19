@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en" >
 	<head>
-		<meta charset = "utf-8">
+		<meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
 		<title>Jenny's Portfolio</title>
 		<!-- Bootstrap: CSS only -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -506,8 +506,8 @@
 			/* MODAL FUNCTIONALITY */
 			/* FOR ART GALLERY */
 
-			$("img#bird-migration-topper").click(function() {
-				$("img#bird-migration-topper").css('display', 'block');
+			$("#bird-migration-topper").click(function() {
+				$("#bird-migration-topper").css('display', 'block');
 			})
 
 
@@ -1512,6 +1512,12 @@
 				</div>
 			</div>
 
+			<!-- The modal -->
+			<!-- onclick="this.style.display='none'" -->
+			<div id="modal-popup" class="modal">
+				<img class="modal-content" id="modal-popup-img" style="width:100%">
+			</div>
+
 		</div>
 
 		<!--END of Art Gallery-->
@@ -1524,11 +1530,6 @@
 				<h5>Am accepting commissions for crochet and embroidery work!</h5>
 			</div>
 		</div> -->
-
-		<!-- The modal -->
-		<div id="modal-popup" class="modal" onclick="this.style.display='none'">
-			<img class="modal-content" id="modal-popup-img" style="width:100%">
-		</div>
 
 
 		<p class = "bottom-section">
