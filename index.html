@@ -359,6 +359,22 @@
 			padding: 3px;
 			/* text-align: center; */ /* hm maybe we can try left align? */
 		}
+
+		/* trying out pseudo elements for partial border effect */
+		
+		figcaption::before {
+			left: 0;
+			top: 0;
+			border-left: 3px solid #8ad1bf;
+			border-top: 3px solid #8ad1bf;
+		}
+
+		figcaption::after {
+			right: 0;
+			bottom: 0;
+			border-right: 3px solid #8ad1bf;
+			border-bottom: 3px solid #8ad1bf;
+		}
 		
 		/* figcaption {
 			grid-row: 2;
