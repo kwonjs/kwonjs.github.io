@@ -333,6 +333,7 @@
 			grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
 			gap: 1rem;
 			grid-template-rows: masonry;
+			gap: 1.5em; /* define gap between each figure/scrapbook "photo" */
 		}
 		
 		img {
@@ -345,9 +346,14 @@
 			display: grid;
 			grid-template-rows: 1fr auto;
 			background-color: #f7f0ed; /* trying out a scrapbook esque look */
-			gap: 1.5em; /* define gap between each figure/scrapbook "photo" */
 			border: 1px solid #e6d9d3; /* border around each scrapbook "photo" */
 			border-radius: 1.5px;
+			padding: 1.5rem;
+		}
+
+		img {
+			background-color: white;
+			border: 1px solid #e6d9d3;
 		}
 		
 		figure > img {
