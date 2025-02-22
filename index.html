@@ -344,6 +344,10 @@
 			margin: 0;
 			display: grid;
 			grid-template-rows: 1fr auto;
+			background-color: #f7f0ed; /* trying out a scrapbook esque look */
+			gap: 1.5em; /* define gap between each figure/scrapbook "photo" */
+			border: 1px solid #e6d9d3; /* border around each scrapbook "photo" */
+			border-radius: 1.5px;
 		}
 		
 		figure > img {
@@ -352,7 +356,7 @@
 		}
 
 		figcaption {
-			background-color: #c7ffec; /* match the art gallery color*/
+			background-color: #f7f0ed; /* match the scrapbook background paper */
 			opacity: 0.75;
 			color: black;
 			font: italic smaller sans-serif;
@@ -361,7 +365,7 @@
 		}
 
 		/* trying out pseudo elements for partial border effect */
-		
+
 		figcaption::before {
 			left: 0;
 			top: 0;
