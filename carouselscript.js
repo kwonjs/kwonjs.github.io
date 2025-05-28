@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel")
-  const arrowBtns = document.querySelectorAll(".wrapper i")
+  const arrowBtns = document.querySelectorAll(".wrapper button")
   const wrapper = document.querySelector(".wrapper")
 
   const firstCard = carousel.querySelector(".card")
