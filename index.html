@@ -326,52 +326,75 @@
 			}
 		}
 
-		/* STYLING FOR ART GALLERY PORTION */
+		/* STYLING FOR ART GALLERY - MASONRY EFFECT */
 
-		.grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-			gap: 1rem;
-			grid-template-rows: masonry;
-			gap: 1.5em; /* define gap between each figure/scrapbook "photo" */
-		}
-		
-		img {
+		/* MOVE THIS + DON'T TOUCH - may affect ALL images on website */
+
+		img { 
 			max-width: 100%;
 			display: block;
 		}
-		
-		figure {
-			margin: 0;
-			display: grid;
-			grid-template-rows: 1fr auto;
-			/* #e6fff6 to better match art content theme color */
-			background-color: #e6fff6; /* trying out a scrapbook esque look - #f7f0ed */
-			/* #b6f2de to better match art content theme color */
-			border: 1.5px solid #b6f2de; /* border around each scrapbook "photo" - #e6d9d3 */
-			border-radius: 1.5px;
-			padding: 1em;
-		}
-		
-		figure > img {
-			grid-row: 1 / -1;
-			grid-column: 1;
+
+		/* END MOVE THIS */
+
+		/* the main art gallery parent container */
+		.grid-container {
+			column-count: 2;
+			column-gap: 1em;
 		}
 
+		@media screen and (max-width: 900px) {
+			.grid-container {
+				column-count: 1;
+			}
+		}
+
+		/* the container for each image and caption container */
+		figure {
+			margin: 0 0 .5em;
+			width: 100%;
+			display: inline-block;
+			/* display: grid;
+			grid-template-rows: 1fr auto; */
+			/* #e6fff6 to better match art content theme color */
+			/* background-color: #e6fff6;  */
+			/* trying out a scrapbook esque look - #f7f0ed */
+			/* #b6f2de to better match art content theme color */
+			/* border: 1.5px solid #b6f2de;  */
+			/* border around each scrapbook "photo" - #e6d9d3 */
+			/* border-radius: 1.5px; */
+			/* padding: 1em; */
+		}
+		
+		/* only target images inside the figure tag used in the art gallery */
+
+		/* figure > img {
+			max-width: 100%;
+			height: auto;
+			vertical-align: middle;
+			display: flex;
+			position: relative;
+			flex-basis: calc(100%/3);
+		}
+		 */
+
 		.gallery-img-div {
-			background-color: white;
-			border: 1px solid #b6f2de; /* border around each scrapbook "photo" - #e6d9d3 */
-			padding: 10px; /* arbitrary amount of padding for now*/
+			/* background-color: white; */
+			/* border: 1px solid #b6f2de;  */
+			/* border around each scrapbook "photo" - #e6d9d3 */
+			/* padding: 10px;  */
+			/* arbitrary amount of padding for now*/
 		}
 
 		figcaption {
-			margin-top: 1em; /* give some space between the image and caption */
+			margin-top: .5em; /* give some space between the image and caption */
 			/* match to background - now art content/gallery theme */
-			background-color: #e6fff6; /* match the scrapbook background paper - #f7f0ed */
+			/* background-color: #e6fff6;  */
+			/* match the scrapbook background paper - #f7f0ed */
 			opacity: 0.75;
 			color: black;
 			font: italic smaller sans-serif;
-			padding: 3px;
+			/* padding: 3px; */
 			/* text-align: center; */ /* hm maybe we can try left align? */
 		}
 
@@ -379,11 +402,11 @@
 
 		 /* style the image triggering the modal */
 
-		.gallery-img-div {
+		/* .gallery-img-div {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-		}
+		} */
 		 
 		.gallery-img {
 			/* border-radius: 5px; */
@@ -1523,7 +1546,7 @@
 			<!-- NEXT STEPS: make sure it's accessible via mobile too — make sure to include touch functionality as well -->
 
 			<div class="gallery-wrapper">
-				<div class="grid">
+				<div class="grid-container">
 					<figure><div class="gallery-img-div"><img id="bird-migration-topper" class="gallery-img" src="https://raw.githubusercontent.com/kwonjs/kwonjs.github.io/main/gallery-art/bird-migration-topper.png" alt="An illustration of a view of the Golden Gate Bridge from Marin, with rolling green hills and evergreen trees in the foreground and more hills shrouded in fog in the background. In the center, a flock of surf scoters fly past."/></div>
 						<figcaption><a href="https://www.sfchronicle.com/projects/2024/sf-bird-migration/">"Here’s why the Bay Area is so important for birds — and where to find them"</a> (San Francisco Chronicle, Christian Leonard + Jenny Kwon)</figcaption>
 					</figure>
