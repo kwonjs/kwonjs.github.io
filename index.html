@@ -655,17 +655,17 @@
 				})
 			})
 
-			// for toggling for more design explanation
-			$(".toggle-button").click(function() {
+			// for toggling for more design explanation in work section
+			$(".work-button").click(function() {
 
 				var designcontainer = $(this).closest(".see-more-container");
 				var hiddenexplanation = container.find(".hidden-content")
 
 				hiddenexplanation.slideToggle(300, function() {
 					if (hiddenexplanation.is(":visible")) {
-						designcontainer.find(".toggle-button").text("▲ Hide the design process")
+						designcontainer.find(".work-button").text("▲ Hide the design process")
 					} else {
-						designcontainer.find(".toggle-button").text("▶ Click to learn more about design process")
+						designcontainer.find(".work-button").text("▶ Click to learn more about design process")
 					}
 				})
 			})
