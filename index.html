@@ -552,6 +552,7 @@
 
 			var keyboardclick = document.createElement('audio');
 			keyboardclick.setAttribute('src', 'audio/spacebar-click-keyboard.mp3');
+			keyboardclick.volume = 0.5; /* reduce the volume of the keyboard clack */
 
 			$("#about-tab").click(function () {
 				keyboardclick.play();
