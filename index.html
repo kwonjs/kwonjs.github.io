@@ -490,11 +490,17 @@
 
 		/* edit styling */
 		.toggle-button {
-			color: white;
-			padding: 8px 15px;
-			border: none;
+			color: black; /* text color */
+			padding: 4px 8px;
 			cursor: pointer;
+			display: inline-block;
 			margin-top: 10px; 
+			margin-right: 1em;
+			margin-bottom: 1em;
+			border-style: solid;
+			border-color: lightgray;
+			border-width: 3px;
+			border-radius: 5px;
 		}
 
 	</style>
@@ -594,7 +600,7 @@
 				var container = $(this).closest(".design-explanation-container");
 				var hiddencontent = container.find(".hidden-content")
 
-				hiddencontent.slideToggle(400, function() {
+				hiddencontent.slideToggle(300, function() {
 					if (hiddencontent.is(":visible")) {
 						container.find(".toggle-button").text("Hide design process")
 					} else {
